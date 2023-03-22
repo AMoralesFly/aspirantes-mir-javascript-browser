@@ -20,7 +20,7 @@
             margin: 20px auto;
             background: linear-gradient(#D27685, #9E4784);
             box-shadow: 3px 3px 4px 4px #333;
-            color: #66347F;
+            color: white;
             box-sizing: border-box;
             position: relative;
             text-align: center;
@@ -50,12 +50,12 @@
 
     <div id="contenedor">
         <div id="inputTexto">
-            <h1>Palindromo</h1>
+            <h1>Conversor a mayusculas</h1>
             <label for="texto">Ingresa tu texto !</label>
             <input type="text" name="entrada" id="texto">
         </div>
 
-        <button id="btn">Verificador </button>
+        <button id="btn">Convertir mensaje a mayusculas</button>
 
         <div id="outputMayu">
             <h2>resultado</h2>
@@ -69,18 +69,15 @@
         const boton = document.getElementById('btn');
         const resultado = document.getElementById('resultado');
 
-        boton.addEventListener('click', function () {
-            const texto = input.value.replace(/ +/g, "")
-            const textoInvertido = input.value.replace(/ +/g, "").split("").reverse().join("");
-            if (texto === textoInvertido) {
-                resultado.innerHTML = "Es un palindromo";
-            } else {
-                resultado.innerHTML = "Lo siento, no es un palindromo";
-            }
-
+        input.addEventListener('input', function () {
+            const texto = input.value.toUpperCase();
+            resultado.textContent = texto;
         });
 
-
+        boton.addEventListener('click', function () {
+            const textoN = input.value.toUpperCase();
+            resultado.innerHTML = textoN;
+        });
 
 
     </script>
