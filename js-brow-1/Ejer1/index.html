@@ -5,44 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js" defer ></script>
     <title>Document</title>
-    <style>
-        body {
-            margin: 0 auto;
-            max-width: 1200px;
-        }
-
-        #contenedor {
-            width: 500px;
-            height: auto;
-            padding: 20px;
-            border-radius: 20px;
-            margin: 20px auto;
-            background: linear-gradient(#D27685, #9E4784);
-            box-shadow: 3px 3px 4px 4px #333;
-            color: white;
-            box-sizing: border-box;
-            position: relative;
-            text-align: center;
-        }
-
-        div #outputMayu,
-        #inputTexto {
-            display: block;
-            padding: 5px;
-            min-height: 100px;
-            word-wrap: break-word;
-        }
-
-        .btn {
-            width: 100%;
-            height: auto;
-
-            margin-right: auto;
-            margin-left: auto;
-        }
-    </style>
-
 </head>
 
 <body>
@@ -60,27 +25,12 @@
         <div id="outputMayu">
             <h2>resultado</h2>
             <p id="resultado"></p>
+            <p id="btnresultado"></p>
 
         </div>
     </div>
 
-    <script>
-        const input = document.getElementById('texto');
-        const boton = document.getElementById('btn');
-        const resultado = document.getElementById('resultado');
 
-        input.addEventListener('input', function () {
-            const texto = input.value.toUpperCase();
-            resultado.textContent = texto;
-        });
-
-        boton.addEventListener('click', function () {
-            const textoN = input.value.toUpperCase();
-            resultado.innerHTML = textoN;
-        });
-
-
-    </script>
 
 </body>
 

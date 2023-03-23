@@ -23,6 +23,7 @@ div #outputMayu,
     padding: 5px;
     min-height: 100px;
     word-wrap: break-word;
+    color: white;
 }
 
 .btn {
